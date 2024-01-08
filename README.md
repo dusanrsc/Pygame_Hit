@@ -1,1 +1,1 @@
-"# Pygame_Hit" 
+# Pygame_Hit is copy of popular pilsner game
