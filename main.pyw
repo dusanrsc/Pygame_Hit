@@ -48,7 +48,7 @@ MOUSE_VISIBILITY = pygame.mouse.set_visible(False)
 class Player(pygame.sprite.Sprite):
 	def __init__(self, pos_x=375, pos_y=275):
 		super().__init__()
-		self.image = pygame.image.load("player.png").convert()
+		self.image = pygame.image.load("sprites/player.png").convert()
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
@@ -57,11 +57,11 @@ class Player(pygame.sprite.Sprite):
 		self.rect.x = pygame.mouse.get_pos()[0]
 		self.rect.y = 551
 
-# class z(hit)os
+# class hit
 class Hit(pygame.sprite.Sprite):
 	def __init__(self, pos_x=random.randint(0, SCREEN_WIDTH - 20), pos_y=-20):
 		super().__init__()
-		self.image = pygame.image.load("hit.png").convert()
+		self.image = pygame.image.load("sprites/hit.png").convert()
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
@@ -75,7 +75,7 @@ class Hit(pygame.sprite.Sprite):
 class Crossover(pygame.sprite.Sprite):
 	def __init__(self, pos_x=0, pos_y=0):
 		super().__init__()
-		self.image = pygame.image.load("crossover.png").convert()
+		self.image = pygame.image.load("sprites/crossover.png").convert()
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
