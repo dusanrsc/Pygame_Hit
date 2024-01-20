@@ -1,3 +1,2 @@
-# All static files (sprites) must be on the same path as main.pyw for proper working
 # Pygame_Hit is copy of popular pilsner game
 # Pygame is small python's library for making tiny 2D games...
