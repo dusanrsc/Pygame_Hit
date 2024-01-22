@@ -1,4 +1,3 @@
-# all static files (sprites) must be in the same path as main.pyw for proper working
 # importing modules
 import pygame
 import random
@@ -33,7 +32,7 @@ ALPHA = GREEN
 # game variables
 health_value = 4
 
-__version__ = "v0.1"
+__version__ = "v1.0"
 
 running = True
 debugging = True
@@ -52,6 +51,7 @@ class Player(pygame.sprite.Sprite):
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
+	# update method
 	def update(self):
 		# player movement
 		self.rect.x = pygame.mouse.get_pos()[0]
@@ -65,6 +65,7 @@ class Hit(pygame.sprite.Sprite):
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
+	# update method
 	def update(self):
 		# hit movement
 		self.rect.y += SPEED
@@ -72,6 +73,7 @@ class Hit(pygame.sprite.Sprite):
 			self.rect.x = random.randint(0, SCREEN_WIDTH - 10)
 			self.rect.y = -20
 
+# class crossover
 class Crossover(pygame.sprite.Sprite):
 	def __init__(self, pos_x=0, pos_y=0):
 		super().__init__()
@@ -79,7 +81,7 @@ class Crossover(pygame.sprite.Sprite):
 		self.image.set_colorkey(ALPHA)
 		self.rect = self.image.get_rect(center = [pos_x, pos_y])
 
-	# player movement
+	# update method
 	def update(self):
 		self.rect.x = pygame.mouse.get_pos()[0] + 26
 		self.rect.y = pygame.mouse.get_pos()[1] + 26
